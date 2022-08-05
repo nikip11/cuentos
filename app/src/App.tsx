@@ -9,8 +9,14 @@ function App() {
   return (
     <>
       <div className="App-header">
-        <h1>cuentos</h1>
-        {video && (<Iframe src={video.url} />)}
+        {video && (
+          <div style={{
+            display: 'flex',
+            width: '90%',
+          }}>
+            <Iframe src={video.url} />
+          </div>
+        )}
         <Gallery setter={setVideo} />
       </div>
     </>

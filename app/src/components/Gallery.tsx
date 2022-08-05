@@ -13,11 +13,12 @@ export default function Gallery(props: Props) {
 
   return (
     <div className="gallery" style={{
-      display: 'flex',
+      display: 'block',
       justifyContent: 'center',
       alignItems: 'center',
-      width: '100%',
-      overflow: 'scroll',
+      width: '90%',
+      overflowX: 'scroll',
+      cursor: 'pointer',
     }}>
       {videos.map((video, index) => (
         <img
