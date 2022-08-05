@@ -12,7 +12,7 @@ function App() {
         {video && (
           <div style={{
             display: 'flex',
-            width: '90%',
+            width: '80%',
           }}>
             <Iframe src={video.url} />
           </div>

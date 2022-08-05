@@ -13,20 +13,24 @@ export default function Gallery(props: Props) {
 
   return (
     <div className="gallery" style={{
-      display: 'block',
-      justifyContent: 'center',
-      alignItems: 'center',
-      width: '90%',
-      overflowX: 'scroll',
-      cursor: 'pointer',
+      width: '85%',
+      overflowX: 'auto',
+      display: 'grid',
+      gridGap: '10px',
+      gridTemplateColumns: 'repeat(auto-fill,minmax(120px,1fr))',
+      gridAutoFlow: 'column',
+      gridAutoColumns: 'minmax(120px,1fr)'
     }}>
       {videos.map((video, index) => (
-        <img
+        <button
           key={index}
-          src={video.cover}
-          alt={video.title}
-          style={{ width: '100%', maxWidth: '200px', height: 'auto', margin: ' 0 5px' }}
-          onClick={() => handleClick(video)} />
+          onClick={() => handleClick(video)}>
+          <img
+            src={video.cover}
+            alt={video.title}
+            style={{ width: '100%', maxWidth: '200px', height: 'auto' }}
+          />
+        </button>
       ))}
     </div >
   )
