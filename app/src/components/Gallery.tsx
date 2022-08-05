@@ -14,6 +14,7 @@ export default function Gallery(props: Props) {
   return (
     <div className="gallery" style={{
       width: '85%',
+      height: '120px',
       overflowX: 'auto',
       display: 'grid',
       gridGap: '10px',
@@ -24,7 +25,8 @@ export default function Gallery(props: Props) {
       {videos.map((video, index) => (
         <button
           key={index}
-          onClick={() => handleClick(video)}>
+          onClick={() => handleClick(video)}
+          style={{ backgroundColor: 'white', border: 'none' }}>
           <img
             src={video.cover}
             alt={video.title}
