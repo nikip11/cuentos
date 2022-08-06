@@ -3,6 +3,7 @@ import './App.css';
 import Iframe from './components/Iframe';
 import Gallery from './components/Gallery';
 import type { Video } from './types';
+import Footer from './components/Footer';
 
 function App() {
   const [video, setVideo] = React.useState<Video | null>(null);
@@ -12,12 +13,13 @@ function App() {
         {video && (
           <div style={{
             display: 'flex',
-            width: '80%',
+            width: '85%',
           }}>
             <Iframe src={video.url} />
           </div>
         )}
         <Gallery setter={setVideo} />
+        <Footer />
       </div>
     </>
   )

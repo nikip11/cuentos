@@ -20,7 +20,9 @@ export default function Gallery(props: Props) {
       gridGap: '10px',
       gridTemplateColumns: 'repeat(auto-fill,minmax(120px,1fr))',
       gridAutoFlow: 'column',
-      gridAutoColumns: 'minmax(120px,1fr)'
+      gridAutoColumns: 'minmax(120px,1fr)',
+      backgroundColor: '#fff',
+      padding: '10px',
     }}>
       {videos.map((video, index) => (
         <button
