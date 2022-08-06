@@ -18,7 +18,7 @@ export default function Iframe(props: Props) {
         }}>
           <iframe
             title={title}
-            src={`${src}?rel=0&autoplay=1`}
+            src={`${src}?rel=0`}
             frameBorder="0"
             height={height}
             width={width}
