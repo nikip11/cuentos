@@ -19,7 +19,6 @@ function App() {
           </div>
         )}
         <Gallery setter={setVideo} />
-        <Footer />
       </div>
     </>
   )
